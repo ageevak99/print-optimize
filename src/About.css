@@ -1,0 +1,239 @@
+
+.about-main {
+  width: calc(100% - 104px);
+  max-width: 1056px;
+  margin: 0 auto;
+  padding: 65px 0 80px;
+}
+
+.about-hero {
+  padding: 35px 0 45px;
+  border-bottom: 1px solid #e6efff;
+}
+
+.about-label {
+  color: #087bfa;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.about-hero h1 {
+  margin: 12px 0 10px;
+  color: #080d19;
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.about-hero > p {
+  max-width: 650px;
+  margin: 0;
+  color: #444;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.about-description {
+  padding: 38px 0 20px;
+}
+
+.about-description h2,
+.about-features > h2,
+.about-goal h2 {
+  margin: 0 0 16px;
+  color: #080d19;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.about-description p,
+.about-goal p {
+  max-width: 900px;
+  margin: 0 0 12px;
+  color: #333;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.about-features {
+  padding: 35px 0;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.about-card {
+  position: relative;
+  min-height: 260px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #e4ecf7;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
+}
+
+.about-card-number {
+  margin-bottom: 20px;
+  color: #087bfa;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.about-card h3 {
+  margin: 0 0 12px;
+  color: #080d19;
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.about-card p {
+  margin: 0 0 20px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.about-card a {
+  margin-top: auto;
+  color: #087bfa;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.about-card a:hover {
+  text-decoration: underline;
+}
+
+.about-card-future {
+  background: #f7faff;
+}
+
+.about-future-label {
+  position: absolute;
+  top: 21px;
+  right: 17px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #e6f1ff;
+  color: #087bfa;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.about-goal {
+  padding: 35px 0;
+  border-top: 1px solid #e6efff;
+}
+
+.about-bottom {
+  margin-top: 25px;
+  padding: 35px;
+  border-radius: 14px;
+  background: #f2f7ff;
+  text-align: center;
+}
+
+.about-bottom h2 {
+  margin: 0 0 10px;
+  color: #080d19;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.about-bottom p {
+  margin: 0 0 22px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-bottom-button {
+  min-width: 180px;
+  height: 44px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 30px;
+  background: #087bfa;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.about-bottom-button img {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+}
+
+/* АДАПТИВНОСТЬ */
+
+@media (max-width: 900px) {
+  .about-main {
+    width: calc(100% - 60px);
+  }
+
+  .about-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .about-main {
+    width: calc(100% - 32px);
+    padding-top: 35px;
+  }
+
+  .about-hero {
+    padding: 20px 0 30px;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .about-hero > p {
+    font-size: 16px;
+  }
+
+  .about-description h2,
+  .about-features > h2,
+  .about-goal h2 {
+    font-size: 23px;
+  }
+
+  .about-description p,
+  .about-goal p {
+    font-size: 15px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .about-card {
+    min-height: 220px;
+  }
+
+  .about-bottom {
+    padding: 28px 18px;
+  }
+
+  .about-bottom h2 {
+    font-size: 21px;
+  }
+}

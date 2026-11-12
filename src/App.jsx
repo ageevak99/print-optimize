@@ -5,18 +5,60 @@ import heroImage from './assets/hero.png'
 import telegramIcon from './assets/telegram-2.png'
 import './App.css'
 
-const TELEGRAM_URL = 'https://t.me/'
+import Catalog from './Catalog'
+import Warping from './Warping'
+import UnderExtrusion from './UnderExtrusion'
+import OverExtrusion from './OverExtrusion'
+import TopLayerGaps from './TopLayerGaps'
+import Stringing from './Stringing'
+import Overheating from './Overheating'
+import LayerShifting from './LayerShifting'
+import About from './About'
+
+const TELEGRAM_URL = 'https://t.me/PrintOptimize_agent'
 
 function App() {
   const [search, setSearch] = useState('')
 
+  // Страница каталога
+  if (window.location.pathname === '/catalog') {
+    return <Catalog />
+  }
+
+  // Страница дефекта «Коробление»
+  if (window.location.pathname === '/warping') {
+    return <Warping />
+  }
+  if (window.location.pathname === '/under-extrusion') {
+  return <UnderExtrusion />
+}
+if (window.location.pathname === '/over-extrusion') {
+  return <OverExtrusion />
+}
+if (window.location.pathname === '/stringing') {
+  return <Stringing />
+}
+if (window.location.pathname === '/overheating') {
+  return <Overheating />
+}
+if (window.location.pathname === '/layer-shifting') {
+  return <LayerShifting />
+}
+if (window.location.pathname === '/about') {
+  return <About />
+}
+
   function handleSearch(event) {
     event.preventDefault()
     const query = search.trim()
+
     window.location.href = query
       ? `/catalog?search=${encodeURIComponent(query)}`
       : '/catalog'
   }
+  if (window.location.pathname === '/top-layer-gaps') {
+  return <TopLayerGaps />
+}
 
   return (
     <div className="site">
@@ -31,8 +73,12 @@ function App() {
           <a href="/about">О проекте</a>
         </nav>
 
-        <a href={TELEGRAM_URL} className="header-button"
-          target="_blank" rel="noreferrer">
+        <a
+          href={TELEGRAM_URL}
+          className="header-button"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={telegramIcon} alt="" />
           Найти по фото
         </a>
@@ -79,11 +125,13 @@ function App() {
           </form>
 
           <section className="telegram-card">
-            <a href={TELEGRAM_URL}
+            <a
+              href={TELEGRAM_URL}
               target="_blank"
               rel="noreferrer"
               className="telegram-icon"
-              aria-label="Telegram">
+              aria-label="Telegram"
+            >
               <img src={telegramIcon} alt="" />
             </a>
 
@@ -95,10 +143,12 @@ function App() {
               </span>
             </div>
 
-            <a href={TELEGRAM_URL}
+            <a
+              href={TELEGRAM_URL}
               target="_blank"
               rel="noreferrer"
-              className="telegram-button">
+              className="telegram-button"
+            >
               Найти по фото
             </a>
           </section>

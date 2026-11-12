@@ -1,0 +1,312 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* ОСНОВА */
+
+.warping-page {
+  min-height: 100vh;
+  background: #fff;
+  color: #080808;
+  font-family: 'Manrope', sans-serif;
+}
+
+/* ШАПКА */
+
+.warping-header {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  min-height: 78px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-bottom: 1px solid #dce8f8;
+}
+
+.warping-logo img {
+  display: block;
+  width: 270px;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+.warping-navigation {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+.warping-navigation a {
+  color: #080808;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.warping-navigation a.active,
+.warping-navigation a:hover {
+  color: #087bfa;
+}
+
+.warping-telegram {
+  min-width: 185px;
+  height: 42px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 30px;
+  background: #087bfa;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.warping-telegram img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* ОСНОВНОЙ БЛОК */
+
+.warping-main {
+  width: calc(100% - 104px);
+  max-width: 1056px;
+  margin: 0 auto;
+  padding: 45px 0 70px;
+}
+
+/* ФОТОГРАФИИ И ЗАГОЛОВОК */
+
+.warping-intro {
+  display: grid;
+  grid-template-columns: 390px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* ГАЛЕРЕЯ 2 × 2 */
+
+.warping-gallery {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.warping-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.3 / 1;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* ЗАГОЛОВОК И ОПИСАНИЕ СПРАВА */
+
+.warping-heading h1 {
+  margin: 0 0 2px;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.warping-heading p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.warping-heading h2 {
+  margin: 24px 0 8px;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+/* ТЕКСТОВЫЕ РАЗДЕЛЫ */
+
+.warping-section {
+  margin-top: 25px;
+}
+
+.warping-section h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.warping-section p,
+.warping-section ol,
+.warping-section ul {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.warping-section ol {
+  padding-left: 22px;
+}
+
+/* СПИСОК СПОСОБОВ УСТРАНЕНИЯ */
+
+.warping-solutions {
+  padding: 0;
+  list-style: none;
+}
+
+.warping-solutions li {
+  position: relative;
+  padding-left: 21px;
+}
+
+.warping-solutions li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #20bd4b;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* КНОПКА ВОЗВРАТА */
+
+.warping-back {
+  display: inline-block;
+  margin-top: 32px;
+  color: #087bfa;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.warping-back:hover {
+  text-decoration: underline;
+}
+
+/* ПЛАНШЕТЫ И НЕБОЛЬШИЕ ЭКРАНЫ */
+
+@media (max-width: 900px) {
+  .warping-header {
+    gap: 15px;
+  }
+
+  .warping-logo img {
+    width: 210px;
+  }
+
+  .warping-navigation {
+    gap: 25px;
+  }
+
+  .warping-navigation a {
+    font-size: 14px;
+  }
+
+  .warping-telegram {
+    min-width: 130px;
+    font-size: 12px;
+  }
+
+  .warping-main {
+    width: calc(100% - 60px);
+  }
+
+  .warping-intro {
+    grid-template-columns: 350px minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+/* МОБИЛЬНЫЕ УСТРОЙСТВА */
+
+@media (max-width: 700px) {
+  .warping-header {
+    width: calc(100% - 24px);
+    min-height: 65px;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .warping-logo img {
+    width: 165px;
+  }
+
+  .warping-navigation {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .warping-navigation a {
+    font-size: 13px;
+  }
+
+  .warping-telegram {
+    min-width: 125px;
+    height: 32px;
+    font-size: 11px;
+  }
+
+  .warping-main {
+    width: calc(100% - 32px);
+    padding-top: 30px;
+  }
+
+  .warping-intro {
+    grid-template-columns: 390px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .warping-gallery {
+    max-width: none;
+  }
+
+  .warping-heading h1 {
+    font-size: 30px;
+  }
+
+  .warping-heading h2,
+  .warping-section h2 {
+    font-size: 20px;
+  }
+
+  .warping-section p,
+  .warping-section ol,
+  .warping-section ul,
+  .warping-heading p {
+    font-size: 14px;
+  }
+}
+
+/* УЗКИЕ ТЕЛЕФОНЫ */
+
+@media (max-width: 500px) {
+  .warping-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .warping-gallery {
+    max-width: 420px;
+  }
+
+  .warping-heading h1 {
+    font-size: 28px;
+  }
+}
