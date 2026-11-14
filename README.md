@@ -1,16 +1,26 @@
-# React + Vite
+О проекте
+Помогаем разобраться в дефектах 3D-печати и находить способы их устранения.
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Что такое PrintOptimize?
+PrintOptimize — это проект, направленный на помощь начинающим пользователям 3D-принтеров в выявлении и устранении дефектов печати.
 
-Currently, two official plugins are available:
+Проект объединяет Telegram-бота с нейросетью для определения дефектов по фотографии и сайт-справочник с подробной информацией о проблемах 3D-печати.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Что предлагает проект?
 
-## React Compiler
+Telegram-бот с нейросетью
+Отправьте фотографию детали, а нейросеть поможет определить возможный дефект и разобраться в проблеме.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the Oxlint configuration
+Справочник дефектов
+В каталоге собраны 27 наиболее распространённых дефектов 3D-печати. Для каждого представлены описание, возможные причины и способы устранения.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+В планах
+Мониторинг печати
+В будущем планируется создание камеры с системой, которая сможет отслеживать появление дефектов непосредственно во время печати.
+
+Наша цель
+Начинающим пользователям бывает сложно ориентироваться в большом количестве разрозненной информации в интернете и самостоятельно определять причины неудачной печати.
+
+Мы хотим сделать информацию о дефектах 3D-печати доступной и понятной, чтобы пользователи могли быстрее находить причины проблем и способы их решения.
