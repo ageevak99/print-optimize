@@ -25,9 +25,8 @@
 }
 
 .warping-logo img {
-  display: block;
-  width: 270px;
-  max-height: 58px;
+  width: 250px;
+  height: auto;
   object-fit: contain;
 }
 

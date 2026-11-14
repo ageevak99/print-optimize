@@ -1,8 +1,9 @@
-
 import { useState } from 'react'
+
 import logo from './assets/logo.jpg'
 import heroImage from './assets/hero.png'
 import telegramIcon from './assets/telegram-2.png'
+
 import './App.css'
 
 import Catalog from './Catalog'
@@ -14,52 +15,85 @@ import Stringing from './Stringing'
 import Overheating from './Overheating'
 import LayerShifting from './LayerShifting'
 import About from './About'
+import Delamination from './Delamination'
+import WrongGeometry from './WrongGeometry'
+import ElephantsFoot from './ElephantsFoot'
+import Blobs from './Blobs'
+import Waviness from './Waviness'
+import Scratches from './Scratches'
+import PoorInfill from './PoorInfill'
+import MissingLayers from './MissingLayers'
+import AxisMisalignment from './AxisMisalignment'
+import InfillContourGaps from './InfillContourGaps'
+import FilamentGrinding from './FilamentGrinding'
+import TinyDetails from './TinyDetails'
+import ZBanding from './ZBanding'
+import InconsistentExtrusion from './InconsistentExtrusion'
+import CurlingCorners from './CurlingCorners'
+import ThinWallGaps from './ThinWallGaps'
+import ModelStuckToBed from './ModelStuckToBed'
+import DimensionalAccuracy from './DimensionalAccuracy'
+import Sagging from './Sagging'
+import NoExtrusionStart from './NoExtrusionStart'
 
 const TELEGRAM_URL = 'https://t.me/PrintOptimize_agent'
+
+// Все страницы сайта
+const pages = {
+  '/catalog': Catalog,
+  '/warping': Warping,
+  '/under-extrusion': UnderExtrusion,
+  '/over-extrusion': OverExtrusion,
+  '/top-layer-gaps': TopLayerGaps,
+  '/stringing': Stringing,
+  '/overheating': Overheating,
+  '/layer-shifting': LayerShifting,
+  '/about': About,
+  '/delamination': Delamination,
+  '/wrong-geometry': WrongGeometry,
+  '/elephants-foot': ElephantsFoot,
+  '/blobs': Blobs,
+  '/waviness': Waviness,
+  '/scratches': Scratches,
+  '/poor-infill': PoorInfill,
+  '/missing-layers': MissingLayers,
+  '/axis-misalignment': AxisMisalignment,
+  '/infill-contour-gaps': InfillContourGaps,
+  '/filament-grinding': FilamentGrinding,
+  '/tiny-details': TinyDetails,
+  '/z-banding': ZBanding,
+  '/inconsistent-extrusion': InconsistentExtrusion,
+  '/curling-corners': CurlingCorners,
+  '/thin-wall-gaps': ThinWallGaps,
+  '/model-stuck-to-bed': ModelStuckToBed,
+  '/dimensional-accuracy': DimensionalAccuracy,
+  '/sagging': Sagging,
+  '/no-extrusion-start': NoExtrusionStart
+  
+}
 
 function App() {
   const [search, setSearch] = useState('')
 
-  // Страница каталога
-  if (window.location.pathname === '/catalog') {
-    return <Catalog />
+  // Определяем текущую страницу
+  const CurrentPage = pages[window.location.pathname]
+
+  if (CurrentPage) {
+    return <CurrentPage />
   }
 
-  // Страница дефекта «Коробление»
-  if (window.location.pathname === '/warping') {
-    return <Warping />
-  }
-  if (window.location.pathname === '/under-extrusion') {
-  return <UnderExtrusion />
-}
-if (window.location.pathname === '/over-extrusion') {
-  return <OverExtrusion />
-}
-if (window.location.pathname === '/stringing') {
-  return <Stringing />
-}
-if (window.location.pathname === '/overheating') {
-  return <Overheating />
-}
-if (window.location.pathname === '/layer-shifting') {
-  return <LayerShifting />
-}
-if (window.location.pathname === '/about') {
-  return <About />
-}
-
+  // Поиск по каталогу
   function handleSearch(event) {
     event.preventDefault()
+
     const query = search.trim()
 
     window.location.href = query
       ? `/catalog?search=${encodeURIComponent(query)}`
       : '/catalog'
   }
-  if (window.location.pathname === '/top-layer-gaps') {
-  return <TopLayerGaps />
-}
 
+  // Главная страница
   return (
     <div className="site">
       <header className="header">
@@ -136,12 +170,12 @@ if (window.location.pathname === '/about') {
             </a>
 
             <div className="telegram-text">
-              <strong>Не знаете, что это за дефект?</strong>
-              <span>
-                Отправьте фото в наш Telegram-бот,<br />
-                нейросеть определит возможные причины
-              </span>
-            </div>
+  <strong>Не знаете, что это за дефект?</strong>
+  <span>
+    Отправьте фото в наш Telegram-бот —
+    нейросеть определит возможные причины.
+  </span>
+</div>
 
             <a
               href={TELEGRAM_URL}

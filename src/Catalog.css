@@ -265,9 +265,6 @@
     gap: 15px;
   }
 
-  .defects-logo img {
-    width: 190px;
-  }
 
   .defects-navigation {
     gap: 25px;
@@ -302,9 +299,6 @@
     padding: 10px 0;
   }
 
-  .defects-logo img {
-    width: 165px;
-  }
 
   .defects-navigation {
     order: 3;
